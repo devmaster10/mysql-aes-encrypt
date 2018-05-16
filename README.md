@@ -10,3 +10,12 @@ You can perform the operations "=>, <',' between ',' LIKE ' in encrypted columns
 ```php
 $ composer require devmaster10/aesencrypt:^0.8-dev
 ```
+##2. Configure provider
+If you're on Laravel 5.4 or earlier, you'll need to add and comment line on config/app.php:
+
+```php
+'providers' => array(
+    // Illuminate\Database\DatabaseServiceProvider::class,
+    DevMaster10\\AESEncrypt\\Database\\DatabaseServiceProviderEncrypt::class
+)
+```
