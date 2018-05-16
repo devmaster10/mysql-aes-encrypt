@@ -1,0 +1,30 @@
+{
+    "name": "devmaster10/aesencrypt",
+    "description": "Laravel MySql AES Encrypt/Decrypt",
+    "authors": [
+        {
+            "name": "Marcelo Barros",
+            "email": "marcelofbarros@outlook.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "illuminate/config": "~5.4",
+        "illuminate/database": "~5.4",
+        "illuminate/support": "~5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "DevMaster10\\AESEncrypt\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.8-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev"
+}
