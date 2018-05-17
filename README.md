@@ -1,5 +1,5 @@
 * [Installation](#1install-the-package-via-composer)
-* [Configure Provider](#configure-provider)
+* [Configure Provider](#2configure-provider)
 * [Updating your Eloquent Models](#updating-your-eloquent-odels)
 
 
@@ -15,7 +15,7 @@ You can perform the operations "=>, <',' between ',' LIKE ' in encrypted columns
 ```php
 $ composer require devmaster10/aesencrypt:^0.8-dev
 ```
-##2.Configure provider
+## 2.Configure provider
 If you're on Laravel 5.4 or earlier, you'll need to add and comment line on config/app.php:
 
 ```php
@@ -24,7 +24,7 @@ If you're on Laravel 5.4 or earlier, you'll need to add and comment line on conf
     DevMaster10\\AESEncrypt\\Database\\DatabaseServiceProviderEncrypt::class
 )
 ```
-##Updating your Eloquent Models
+## Updating your Eloquent Models
 
 Your models that have encrypted columns, should extend from ModelEncrypt:
 
