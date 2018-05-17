@@ -1,4 +1,4 @@
-* [Installation](#1.install-the-package-via-composer)
+* [Installation](#1install-the-package-via-composer)
 * [Configure Provider](#configure-provider)
 * [Updating your Eloquent Models](#updating-your-eloquent-odels)
 
