@@ -9,6 +9,16 @@ use DevMaster10\AESEncrypt\Database\GrammarEncrypt;
 
 class MySqlGrammarEncrypt extends GrammarEncrypt
 {
+
+    protected $AESENCRYPT_KEY;
+
+    public function __construct()
+    {
+        $this->AESENCRYPT_KEY = env('APP_AESENCRYPT_KEY');
+
+        if(empty($this->AESENCRYPT_KEY))
+            throw new InvalidArgumentException("Set encryption key in .env file, use this alias APP_AESENCRYPT_KEY");
+    }
     
     protected $columnsEncrypt = [];
 
@@ -303,7 +313,7 @@ class MySqlGrammarEncrypt extends GrammarEncrypt
      */
     protected function wrapValueDecrypt($value)
     {
-        return "AES_DECRYPT(" . $value . ", 'th1s1sasaltkeya')";
+        return "AES_DECRYPT(, '{$this->AESENCRYPT_KEY}')";
     }
 
     /**
@@ -314,7 +324,7 @@ class MySqlGrammarEncrypt extends GrammarEncrypt
      */
     protected function wrapValueEncrypt($value)
     {
-        return "AES_ENCRYPT(" . $value . ", 'th1s1sasaltkeya')";
+        return "AES_ENCRYPT({$value}, '{$this->AESENCRYPT_KEY}')";
     }
 
     /**
