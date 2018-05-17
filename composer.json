@@ -1,6 +1,10 @@
 {
     "name": "devmaster10/aesencrypt",
+    "type": "library",
     "description": "Laravel MySql AES Encrypt/Decrypt",
+    "keywords": ["laravel","mysql", "aes", "encrypt"],
+    "homepage": "https://github.com/Seldaek/monolog",
+    "license": "Apache-2.0",
     "authors": [
         {
             "name": "Marcelo Barros",
