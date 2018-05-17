@@ -1,6 +1,6 @@
 * [Installation](#1install-the-package-via-composer)
 * [Configure Provider](#2configure-provider)
-* [Updating your Eloquent Models](#updating-your-eloquent-odels)
+* [Updating your Eloquent Models](#updating-your-eloquent-models)
 
 
 # Laravel MySql AES Encrypt/Decrypt
@@ -24,7 +24,7 @@ If you're on Laravel 5.4 or earlier, you'll need to add and comment line on conf
     DevMaster10\\AESEncrypt\\Database\\DatabaseServiceProviderEncrypt::class
 )
 ```
-## Updating your Eloquent Models
+## Updating Your Eloquent Models
 
 Your models that have encrypted columns, should extend from ModelEncrypt:
 
