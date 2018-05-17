@@ -10,7 +10,7 @@ Can use all functions of Eloquent/Model<br>
 You can perform the operations "=>, <',' between ',' LIKE ' in encrypted columns<br>
 
 
-##1.Install the package via Composer:
+## 1.Install the package via Composer:
 
 ```php
 $ composer require devmaster10/aesencrypt:^0.8-dev
