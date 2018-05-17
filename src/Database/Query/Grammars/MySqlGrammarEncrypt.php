@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Database\Query\JsonExpression;
 use DevMaster10\AESEncrypt\Database\GrammarEncrypt;
+use InvalidArgumentException;
 
 class MySqlGrammarEncrypt extends GrammarEncrypt
 {
