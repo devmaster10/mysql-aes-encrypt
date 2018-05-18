@@ -11,7 +11,7 @@ if (!function_exists('AESEncrypt\mysqldecrypt')) {
      */
     function mysqldecrypt($column)
     {
-        return "AES_DECRYPT({$column}, '" . env('APP_AESENCRYPT_KEY') ."')";
+        return "AES_DECRYPT(`{$column}`, '" . env('APP_AESENCRYPT_KEY') ."') as `" . ($alias ? $alias : $column) . "`";
     }
 }
 
@@ -24,6 +24,6 @@ if (!function_exists('AESEncrypt\mysqlencrypt')) {
      */
     function mysqlencrypt($column)
     {
-        return "AES_ENCRYPT({$column}, '" . env('APP_AESENCRYPT_KEY') ."')";
+        return "AES_ENCRYPT(`{$column}`, '" . env('APP_AESENCRYPT_KEY') ."') as `" . ($alias ? $alias : $column) . "`";
     }
 }
