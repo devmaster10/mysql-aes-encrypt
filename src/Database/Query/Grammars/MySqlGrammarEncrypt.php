@@ -314,7 +314,7 @@ class MySqlGrammarEncrypt extends GrammarEncrypt
      */
     protected function wrapValueDecrypt($value)
     {
-        return "AES_DECRYPT(, '{$this->AESENCRYPT_KEY}')";
+        return "AES_DECRYPT({$value}, '{$this->AESENCRYPT_KEY}')";
     }
 
     /**
