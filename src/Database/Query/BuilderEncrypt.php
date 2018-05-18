@@ -9,6 +9,8 @@ class BuilderEncrypt extends BuilderCore
     
     protected $fillableEncrypt = null;
 
+    protected $fillableColumns = null;
+
     /**
      * Execute the query as a "select" statement.
      *
@@ -17,12 +19,15 @@ class BuilderEncrypt extends BuilderCore
      */
     public function get($columns = ['*'])
     {
+        if($columns = ['*'])
+            $columns = $this->fillableColumns;
+
         $original = $this->columns;
 
         if (is_null($original)) {
             $this->columns = $columns;
         }
-
+        
         $results = $this->processor->processSelect($this, $this->runSelect());
 
         $this->columns = $original;
@@ -52,4 +57,29 @@ class BuilderEncrypt extends BuilderCore
     {
         return !empty($this->fillableEncrypt) ? $this->fillableEncrypt : [];
     }
+
+    /**
+     * Set a fillable columns
+     *
+     * @param \Illuminate\Support\Collection
+     * @return $this
+     */
+    public function setfillableColumns($fillableColumns)
+    {
+        $this->fillableColumns = $fillableColumns;
+        
+        return $this;
+    }
+
+    /**
+     * Return fillable columns 
+     *
+     * @param \Illuminate\Support\Collection
+     */
+    public function getfillableColumns()
+    {
+        return !empty($this->fillableColumns) ? $this->fillableColumns : [];
+    }
 }
+
+

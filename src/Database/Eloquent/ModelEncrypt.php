@@ -43,6 +43,7 @@ abstract class ModelEncrypt extends Model
         // while it is constructing and executing various queries against it.
 
         return $builder->setModel($this)
+                    ->setfillableColumns($this->fillable)
                     ->with($this->with)
                     ->withCount($this->withCount);
     }
