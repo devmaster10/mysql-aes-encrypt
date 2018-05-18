@@ -9,7 +9,7 @@ if (!function_exists('AESEncrypt\mysqldecrypt')) {
      * @param  string  $column The character encoding
      * @return Stringy column with decrypt function
      */
-    function mysqldecrypt($column)
+    function mysqldecrypt($column, $alias = null)
     {
         return "AES_DECRYPT(`{$column}`, '" . env('APP_AESENCRYPT_KEY') ."') as `" . ($alias ? $alias : $column) . "`";
     }
@@ -22,7 +22,7 @@ if (!function_exists('AESEncrypt\mysqlencrypt')) {
      * @param  string  $column The character encoding
      * @return Stringy column with decrypt function
      */
-    function mysqlencrypt($column)
+    function mysqlencrypt($column, $alias = null)
     {
         return "AES_ENCRYPT(`{$column}`, '" . env('APP_AESENCRYPT_KEY') ."') as `" . ($alias ? $alias : $column) . "`";
     }
