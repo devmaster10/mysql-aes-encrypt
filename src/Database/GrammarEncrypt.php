@@ -498,7 +498,9 @@ class GrammarEncrypt extends \Illuminate\Database\Query\Grammars\Grammar
             if($forceAlias && !empty($columnsEncrypt) && strpos(strtolower($value), ' as ') === false)
             {
                 preg_match("/\`.*?\`/", $value, $alias);
-                $value = $value . ' as ' . $alias[0];
+                if(!empty(@$alias[0])){
+                    $value = $value . ' as ' . @$alias[0];
+                }
             }
 
             $columnize[] = $value;
