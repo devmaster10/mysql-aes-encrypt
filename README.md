@@ -2,7 +2,7 @@
 * [Configure Provider](#2configure-provider)
 * [Updating your Eloquent Models](#updating-your-eloquent-models)
 * [Creating tables to support encrypt columns](#creating-tables-to-support-encrypt-columns)
-* [Set encryption key in .env file](#set-encryption-key-in-env-file)
+* [Set encryption key in .env and config file](#set-encryption-key-in-env-and-config-file)
 
 
 # Laravel MySql AES Encrypt/Decrypt
