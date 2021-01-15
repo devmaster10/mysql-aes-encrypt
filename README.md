@@ -15,7 +15,7 @@ You can perform the operations "=>, <',' between ',' LIKE ' in encrypted columns
 ## 1.Install the package via Composer:
 
 ```php
-$ composer require devmaster10/aesencrypt:dev-master
+$ composer require codiant/dbaesencrypt
 ```
 ## 2.Configure provider
 If you're on Laravel 5.4 or earlier, you'll need to add and comment line on config/app.php:
@@ -84,8 +84,16 @@ It adds new features to Schema which you can use in your migrations:
 
 });
 
-## Set encryption key in .env file
+## Set encryption key in .env and config file
 
 ```php
+Set in .env file
 APP_AESENCRYPT_KEY=yourencryptedkey
+
+Set in config/services.php
+'aesEncrypt' => [
+    'key' => env('APP_AESENCRYPT_KEY'),
+]
 ```
+
+
