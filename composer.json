@@ -7,15 +7,15 @@
     "license": "Apache-2.0",
     "authors": [
         {
-            "name": "Marcelo Barros",
-            "email": "marcelofbarros@outlook.com"
+            "name": "Mahendra Gurjar",
+            "email": "mahendra.gurjar@codiant.com"
         }
     ],
     "require": {
         "php": ">=5.4.0",
-        "illuminate/config": "~5.4",
-        "illuminate/database": "~5.4",
-        "illuminate/support": "~5.4"
+        "illuminate/config": ">=5.4",
+        "illuminate/database": ">=5.4",
+        "illuminate/support": ">=5.4"
     },
     "autoload": {
         "psr-4": {
