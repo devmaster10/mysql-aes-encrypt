@@ -96,12 +96,12 @@ Set in config/services.php
 ]
 ```
 
-## Add BaseUser class 
+## Add BaseUser class for fixed problem of authenticable model problem
+```
+Create BaseUser class in app/BaseUser.php for fixed problem of authenticable model problem
+```
 
 ```php
-Create BaseUser class in app/BaseUser.php for fixed problem of authenticable model problem
-
-
 
 namespace App;
 
@@ -123,8 +123,9 @@ class BaseUser extends Eloquent\ModelEncrypt implements
     use Authenticatable, Authorizable, CanResetPassword, MustVerifyEmail;
 }
 
-
-Extends BaseUser class in your Authenticatable model.
-
 ```
+```
+Extends BaseUser class in your Authenticatable model.
+```
+
 
