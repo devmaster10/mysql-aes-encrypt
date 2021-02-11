@@ -99,7 +99,7 @@ Set in config/services.php
 ## Add BaseUser class for fixed problem of authenticable model problem
 ```
 Create BaseUser class in app/BaseUser.php for fixed problem of authenticable model problem
-
+```
 ```php
 
 namespace App;
