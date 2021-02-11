@@ -99,7 +99,6 @@ Set in config/services.php
 ## Add BaseUser class for fixed problem of authenticable model problem
 ```
 Create BaseUser class in app/BaseUser.php for fixed problem of authenticable model problem
-```
 
 ```php
 
@@ -124,7 +123,7 @@ class BaseUser extends Eloquent\ModelEncrypt implements
 }
 
 ```
-```
+
 Extends BaseUser class in your Authenticatable model.
 ```
 
